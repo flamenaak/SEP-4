@@ -1,5 +1,5 @@
 /*
-* $safeprojectname$.c
+* FirstTest.c
 *
 * Created: 26/10/2016 13:55:41
 * Author : IHA
@@ -18,12 +18,17 @@
 
 #include "src/board/board.h"
 
+void update();
+void matrixify();
+void moveCar (uint16_t direction, uint16_t car[2]);
 static const uint8_t _COM_RX_QUEUE_LENGTH = 30;
 static QueueHandle_t _x_com_received_chars_queue = NULL;
 static SemaphoreHandle_t  xMutex = NULL;
 
 // frame_buf contains a bit pattern for each column in the display
-static uint16_t frame_buf[14] = {0, 0, 28, 62, 126, 254, 508, 254, 126, 62, 28, 0, 0, 0};
+//static uint16_t frame_buf[14] = {0,0,28,62,126,254,508,254,126,62,28,0,0,0};
+static uint16_t frame_buf[14] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+static uint16_t myMatrix[14][10];
 
 //-----------------------------------------
 void another_task(void *pvParameters)
@@ -38,19 +43,126 @@ void another_task(void *pvParameters)
 	
 	BaseType_t result = 0;
 	uint8_t byte;
-	
-	while(1)
-	{
-		result = xQueueReceive(_x_com_received_chars_queue, &byte, 1000L);
 		
-		if (result) {
-			com_send_bytes(&byte, 1);
-		}else {
-			com_send_bytes((uint8_t*)"TO", 2);
+		for(int i = 0; i < 14; i++){
+			for(int j = 0; j < 10; j++){
+				myMatrix[i][j] = 0;
+			}
 		}
+	uint16_t car[2]={0,0};
+	myMatrix[0][0] = 1;
+	myMatrix[6][6] = 1;
+	update();
+	while(1)
+	{	
+		//result = xQueueReceive(_x_com_received_chars_queue, &byte, 1000L);
+			
+    if((~PINC & (1<<PINC0)) != 0){
+			moveCar(0, car); //down
+		}
+
+	if((~PINC & (1<<PINC1)) != 0){
+		moveCar(2, car);// right
+	}
+	if((~PINC & (1<<PINC6)) != 0){
+		moveCar(1, car); //up
+	}
+	if((~PINC & (1<<PINC7)) != 0){
+		moveCar(3,car); //left
+	}
+		
+		///if (result) {
+//			com_send_bytes(&byte, 1);
+	//	}else {
+	//		com_send_bytes((uint8_t*)"TO", 2);
+	//	}
 	}
 }
 
+void moveCar (uint16_t direction, uint16_t car[2]){
+	
+	switch(direction){
+	case 0: 	
+			if((car[1] + 1 <= 9) && myMatrix[car[0]][car[1] + 1] == 0){
+				myMatrix[car[0]][car[1]] = 0;
+				myMatrix[car[0]][++car[1]] = 1;
+				update();
+				vTaskDelay(200);}
+    break;
+	
+	
+	case 1:
+			if(car[1] >= 1){
+				myMatrix[car[0]][car[1]] = 0;
+				--car[1];
+				myMatrix[car[0]][car[1]] = 1;
+				update();
+				vTaskDelay(200);
+			}
+	
+	break;
+	case 2:
+					if((car[0] + 1 <= 13) && myMatrix[car[0] + 1][car[1]] == 0){
+					myMatrix[car[0]][car[1]] = 0;
+					myMatrix[++car[0]][car[1]] = 1;
+					update();
+					vTaskDelay(200);
+				}
+	
+	break;
+	case 3:
+					if((car[0] >= 1) && myMatrix[car[0] - 1][car[1]] == 0){
+					myMatrix[car[0]][car[1]] = 0;
+					myMatrix[--car[0]][car[1]] = 1;
+					update();
+					vTaskDelay(200);
+					}
+	
+	break;
+	}
+}
+
+//  void matrixify(){
+// 	for(int i = 0; i < 14; i++){
+// 		uint16_t num = frame_buf[i];
+// 		for(int j = 9; j >= 0; j--){
+// 			if(num >= (2^j)){
+// 				myMatrix[i][j] = 1;
+// 				num -= (2^j);
+// 			}
+// 			else
+// 			myMatrix[i][j] = 0;
+// 		}
+// 	}
+// }
+
+void update(){
+			for (int i = 0; i < 14; i++)
+			{
+				frame_buf[i] = 0;
+				for(int j =0; j < 10 ; j++){
+					if(myMatrix[i][j] == 1){
+						 frame_buf[i] |= 1<<j;
+					}
+					else {
+						
+					}				
+				}
+			}
+}
+//-----------------------------------------
+// static uint8_t[][] = {{1,0,1,0,0,0,0,0,0,0,0,0,0},
+// 						{}}
+void obstacles_task(void *pvParameters){
+
+					
+					while(1){
+						myMatrix[1][9] =  1;
+						update();
+						vTaskDelay(200);
+					}
+
+}
 //-----------------------------------------
 void startup_task(void *pvParameters)
 {
@@ -69,15 +181,17 @@ void startup_task(void *pvParameters)
 	xMutex = xSemaphoreCreateMutex();
 	
 	// Initialization of tasks etc. can be done here
-	BaseType_t t1 = xTaskCreate(another_task, (const char *)"Another", configMINIMAL_STACK_SIZE, (void *)NULL, tskIDLE_PRIORITY, NULL);
-
+	BaseType_t t1 = xTaskCreate(another_task, (const char *)"Another", configMINIMAL_STACK_SIZE, (void *)NULL, 5, NULL);
+	BaseType_t t2 = xTaskCreate(obstacles_task, (const char *)"Obstacles", configMINIMAL_STACK_SIZE, (void *)NULL, 4, NULL);
+	
+	
 	
 	// Lets send a start message to the console
 	com_send_bytes((uint8_t *)"Then we Start!\n", 15);
 	
 	while(1)
 	{
-		vTaskDelay( 1000 );
+	
 	}
 }
 
