@@ -157,11 +157,6 @@ void update(){
 										 {0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
 //-----------------------------------------
 void obstacles_task(void *pvParameters){
-
-
-
-					
-
 	while(1){							
 		if(obstacles[car[0]][car[1]-1] == 0){
 			int count = 0;
@@ -192,8 +187,8 @@ void obstacles_task(void *pvParameters){
 			}
 			myMatrix[car[0]][car[1]] = 1;
 		}
-			update();
-			vTaskDelay(1600);
+			//update();
+			vTaskDelay(1000);
 	}
 }
 
@@ -203,14 +198,20 @@ void displayUpdater_task(void *pvParameters)
 	while(1)
 	{
 	update();
-	vTaskDelay(40);
+	vTaskDelay(60);
 	}
 }
 //-----------------------------------------
 void gameLogic_task(void *pvParameters)
 {	
+	while(1){
 	struct input inp;
-	/*xQueueReceive(inputQueue, i	*/
+	xQueueReceive(inputQueue, (void*)&inp, portMAX_DELAY);
+	if(sizeof(inp) == sizeof(struct input)){
+		moveCar(inp.direction, inp.car);
+	}
+	vTaskDelay(70);
+	}
 }
 //-----------------------------------------
 void joystickSampler_task(void *pvParameters)
@@ -220,25 +221,28 @@ void joystickSampler_task(void *pvParameters)
 	inp.car[1] = car[1];
 	while(1)
 	{
-	
 		if((~PINC & (1<<PINC0)) != 0){
 			inp.direction = 0;
-			xQueueSend(inputQueue, inp* , portMAX_DELAY); //down
+			moveCar(0,car);
+			//xQueueSend(inputQueue, (void*)&inp , portMAX_DELAY); //down
 		}
 
 		if((~PINC & (1<<PINC1)) != 0){
 			inp.direction = 2;
-			xQueueSend(inputQueue, inp*, portMAX_DELAY);// right
+			moveCar(2,car);
+			//xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY);// right
 		}
 		if((~PINC & (1<<PINC6)) != 0){
 			inp.direction = 1;
-			xQueueSend(inputQueue, inp*, portMAX_DELAY); //up
+			moveCar(1,car);
+			//xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY); //up
 		}
 		if((~PINC & (1<<PINC7)) != 0){
 			inp.direction = 3;
-			xQueueSend(inputQueue, inp*, portMAX_DELAY); //left
+			moveCar(3,car);
+			//xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY); //left
 		}
-		vTaskDelay(150);
+		vTaskDelay(100);
 	}
 }
 //-----------------------------------------
@@ -254,6 +258,19 @@ void comReceiver_task(void *pvParameters)
 //-----------------------------------------
 void startup_task(void *pvParameters)
 {
+		BaseType_t result = 0;
+		uint8_t byte;
+		
+		for(int i = 0; i < 14; i++){
+			for(int j = 0; j < 10; j++){
+				myMatrix[i][j] = 0;
+			}
+		}
+		car[0] = 6; //column
+		car[1] = 9; // row
+		myMatrix[car[0]][car[1]] = 1;
+		update();
+	
 	// The parameters are not used
 	( void ) pvParameters;
 
@@ -262,22 +279,22 @@ void startup_task(void *pvParameters)
 	vTaskSetApplicationTaskTag( NULL, ( void * ) 1 );
 	#endif
 	
-	_x_com_received_chars_queue = xQueueCreate( _COM_RX_QUEUE_LENGTH, ( unsigned portBASE_TYPE ) sizeof( uint8_t ) );
-	init_com(_x_com_received_chars_queue);
+	//_x_com_received_chars_queue = xQueueCreate( _COM_RX_QUEUE_LENGTH, ( unsigned portBASE_TYPE ) sizeof( uint8_t ) );
+	//init_com(_x_com_received_chars_queue);
 	
 	// Initialise Mutex
 	xMutex = xSemaphoreCreateMutex();
 	
 	// Initialization of tasks etc. can be done here
-	BaseType_t t1 = xTaskCreate(another_task, (const char *)"Another", configMINIMAL_STACK_SIZE, (void *)NULL, 5, NULL);
-	//BaseType_t t2 = xTaskCreate(obstacles_task, (const char *)"Obstacles", configMINIMAL_STACK_SIZE, (void *)NULL, 4, NULL);
+	//BaseType_t t1 = xTaskCreate(another_task, (const char *)"Another", configMINIMAL_STACK_SIZE, (void *)NULL, 5, NULL);
+	BaseType_t t2 = xTaskCreate(obstacles_task, (const char *)"Obstacles", configMINIMAL_STACK_SIZE, (void *)NULL, 4, NULL);
 
 	BaseType_t tDU = xTaskCreate(displayUpdater_task, (const char *)"Display updater", configMINIMAL_STACK_SIZE, (void *)NULL, 6, NULL);
 	BaseType_t tGL = xTaskCreate(gameLogic_task, (const char *)"Game logic", configMINIMAL_STACK_SIZE, (void *)NULL, 3, NULL);
 	BaseType_t tJS = xTaskCreate(joystickSampler_task, (const char *)"Joystick sampler", configMINIMAL_STACK_SIZE, (void *)NULL, 2, NULL);
-	BaseType_t tCS1 = xTaskCreate(comSender_task, (const char *)"Communication sender", configMINIMAL_STACK_SIZE, (void *)NULL, 5, NULL);
-	BaseType_t tCR1 = xTaskCreate(comReceiver_task, (const char *)"Communication receiver", configMINIMAL_STACK_SIZE, (void *)NULL, 4, NULL);
-	BaseType_t tOBS = xTaskCreate(obstacles_task, (const char *)"Obstacles", configMINIMAL_STACK_SIZE, (void *)NULL, 1, NULL);
+	//BaseType_t tCS1 = xTaskCreate(comSender_task, (const char *)"Communication sender", configMINIMAL_STACK_SIZE, (void *)NULL, 5, NULL);
+	//BaseType_t tCR1 = xTaskCreate(comReceiver_task, (const char *)"Communication receiver", configMINIMAL_STACK_SIZE, (void *)NULL, 4, NULL);
+	//BaseType_t tOBS = xTaskCreate(obstacles_task, (const char *)"Obstacles", configMINIMAL_STACK_SIZE, (void *)NULL, 1, NULL);
 	
 	
 	// Lets send a start message to the console
@@ -351,8 +368,7 @@ void vApplicationIdleHook( void )
 
 //-----------------------------------------
 int main(void)
-{
-	
+{	
 	init_board();
 	inputQueue = xQueueCreate(20, sizeof(struct input*));
 	
