@@ -29,6 +29,7 @@ static SemaphoreHandle_t  xMutex = NULL;
 //static uint16_t frame_buf[14] = {0,0,28,62,126,254,508,254,126,62,28,0,0,0};
 static uint16_t frame_buf[14] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 static uint16_t myMatrix[14][10];
+uint16_t car[2];
 
 //-----------------------------------------
 void another_task(void *pvParameters)
@@ -49,9 +50,9 @@ void another_task(void *pvParameters)
 				myMatrix[i][j] = 0;
 			}
 		}
-	uint16_t car[2]={0,0};
-	myMatrix[0][0] = 1;
-	myMatrix[6][6] = 1;
+	car[0] = 6; //column
+	car[1] = 9; // row
+	myMatrix[car[0]][car[1]] = 1;
 	update();
 	while(1)
 	{	
@@ -92,7 +93,7 @@ void moveCar (uint16_t direction, uint16_t car[2]){
 	
 	
 	case 1:
-			if(car[1] >= 1){
+			if(car[1] >= 1 && myMatrix[car[0]][car[1] - 1] == 0){
 				myMatrix[car[0]][car[1]] = 0;
 				--car[1];
 				myMatrix[car[0]][car[1]] = 1;
@@ -151,16 +152,76 @@ void update(){
 			}
 }
 //-----------------------------------------
-// static uint8_t[][] = {{1,0,1,0,0,0,0,0,0,0,0,0,0},
-// 						{}}
+ static uint8_t obstacles[14][10] = { {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+										 {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+										 {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+										 {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+										 {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+										 {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+										 {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+										 {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+										 {0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
+//-----------------------------------------
 void obstacles_task(void *pvParameters){
 
+
+
 					
+
 					while(1){
-						myMatrix[1][9] =  1;
-						update();
-						vTaskDelay(200);
+					
+// 					for(int j = 0; j < 10; j++){
+// 						for(int i = 0; i < 14; i++){
+// 							if(i != car[0] && j != car[1]){
+// 								myMatrix[i][1+j] = myMatrix[i][j];
+// 								if(j==0)
+// 								{
+// 									myMatrix[i][j] = 0;
+// 								}
+// 								
+// 							}
+// 						}
+										
+										if(obstacles[car[0]][car[1]-1] == 0){
+											int count = 0;
+											uint8_t aux[14][10];
+											for(int i = 0; i < 14; i++){
+												for(int j = 0; j < 9; j++){
+													// 						if(i != car[0] && j != car[1]){
+													// 							myMatrix[i][j] = obstacles[i][j];
+													// 							}
+													myMatrix[i][1+j] = obstacles[i][j];
+												}
+											}
+											for (int i = 1; i < 14; i++)
+											{
+												myMatrix[0][0] = rand()%2;
+												if(count < 2 || i == 13) {
+												myMatrix[i][0] = rand()%2;
+													if(myMatrix[i][0] == 1)
+													count++;
+													if(i % 4 == 0) count = 0;
+												}
+												else {
+												myMatrix[i][0] = 0;
+												}
+												 //column - row
+											}
+											for(int i = 0; i < 14; i++){
+												for(int j = 0; j < 9; j++){
+													obstacles[i][j] = myMatrix[i][j];
+												}
+											}
+											myMatrix[car[0]][car[1]] = 1;
+	
+	
+										}
+
+											update();
+											vTaskDelay(1600);
 					}
+						
+					
 
 }
 //-----------------------------------------
