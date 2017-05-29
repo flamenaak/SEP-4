@@ -209,30 +209,34 @@ void displayUpdater_task(void *pvParameters)
 //-----------------------------------------
 void gameLogic_task(void *pvParameters)
 {	
-	struct input in = malloc(sizeof(input));
+	struct input inp;
 	/*xQueueReceive(inputQueue, i	*/
 }
 //-----------------------------------------
 void joystickSampler_task(void *pvParameters)
 {
- input in;
-in.car = car;
+	struct input inp;
+	inp.car[0] = car[0];
+	inp.car[1] = car[1];
 	while(1)
 	{
 	
 		if((~PINC & (1<<PINC0)) != 0){
-			in.direction = 0;
-			xQueueSend(inputQueue, in , portMAX_DELAY); //down
+			inp.direction = 0;
+			xQueueSend(inputQueue, inp* , portMAX_DELAY); //down
 		}
 
 		if((~PINC & (1<<PINC1)) != 0){
-			xQueueSend(inputQueue, input{2, car}, portMAX_DELAY);// right
+			inp.direction = 2;
+			xQueueSend(inputQueue, inp*, portMAX_DELAY);// right
 		}
 		if((~PINC & (1<<PINC6)) != 0){
-			xQueueSend(inputQueue, input{1, car}, portMAX_DELAY); //up
+			inp.direction = 1;
+			xQueueSend(inputQueue, inp*, portMAX_DELAY); //up
 		}
 		if((~PINC & (1<<PINC7)) != 0){
-			xQueueSend(inputQueue, input{3, car}, portMAX_DELAY); //left
+			inp.direction = 3;
+			xQueueSend(inputQueue, inp*, portMAX_DELAY); //left
 		}
 		vTaskDelay(150);
 	}
@@ -269,7 +273,7 @@ void startup_task(void *pvParameters)
 	//BaseType_t t2 = xTaskCreate(obstacles_task, (const char *)"Obstacles", configMINIMAL_STACK_SIZE, (void *)NULL, 4, NULL);
 
 	BaseType_t tDU = xTaskCreate(displayUpdater_task, (const char *)"Display updater", configMINIMAL_STACK_SIZE, (void *)NULL, 6, NULL);
-	BaseType_t tGL = xTaskCreate(gameLogic_task (const char *)"Game logic", configMINIMAL_STACK_SIZE, (void *)NULL, 3, NULL);
+	BaseType_t tGL = xTaskCreate(gameLogic_task, (const char *)"Game logic", configMINIMAL_STACK_SIZE, (void *)NULL, 3, NULL);
 	BaseType_t tJS = xTaskCreate(joystickSampler_task, (const char *)"Joystick sampler", configMINIMAL_STACK_SIZE, (void *)NULL, 2, NULL);
 	BaseType_t tCS1 = xTaskCreate(comSender_task, (const char *)"Communication sender", configMINIMAL_STACK_SIZE, (void *)NULL, 5, NULL);
 	BaseType_t tCR1 = xTaskCreate(comReceiver_task, (const char *)"Communication receiver", configMINIMAL_STACK_SIZE, (void *)NULL, 4, NULL);
@@ -350,7 +354,7 @@ int main(void)
 {
 	
 	init_board();
-	inputQueue = xQueueCreate();
+	inputQueue = xQueueCreate(20, sizeof(struct input*));
 	
 	// Shift register Enable output (G=0)
 	PORTD &= ~_BV(PORTD6);
