@@ -244,6 +244,9 @@
     <Compile Include="src\FreeRTOS\Source\portable\MemMang\heap_1.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\input.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\serial\serial.c">
       <SubType>compile</SubType>
     </Compile>
