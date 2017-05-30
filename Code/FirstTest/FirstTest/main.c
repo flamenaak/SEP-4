@@ -37,7 +37,12 @@ static xQueueHandle inputQueue;
 struct input{
 	uint16_t direction;
 	uint16_t car[2];
-}input;
+}Input;
+
+struct car{
+	uint16_t x,y;
+	uint8_t computer;
+	} Car;
 //-----------------------------------------
 void another_task(void *pvParameters)
 {
@@ -205,12 +210,11 @@ void displayUpdater_task(void *pvParameters)
 void gameLogic_task(void *pvParameters)
 {	
 	while(1){
-	struct input inp;
-	xQueueReceive(inputQueue, (void*)&inp, portMAX_DELAY);
-	if(sizeof(inp) == sizeof(struct input)){
-		moveCar(inp.direction, inp.car);
-	}
-	vTaskDelay(70);
+		struct input inp;
+		if(xQueueReceive(inputQueue, (void*)&inp, portMAX_DELAY)){
+			moveCar(inp.direction, car);
+		}
+		vTaskDelay(70);
 	}
 }
 //-----------------------------------------
@@ -223,24 +227,24 @@ void joystickSampler_task(void *pvParameters)
 	{
 		if((~PINC & (1<<PINC0)) != 0){
 			inp.direction = 0;
-			moveCar(0,car);
-			//xQueueSend(inputQueue, (void*)&inp , portMAX_DELAY); //down
+			//moveCar(0,car);
+			xQueueSend(inputQueue, (void*)&inp , portMAX_DELAY); //down
 		}
 
 		if((~PINC & (1<<PINC1)) != 0){
 			inp.direction = 2;
-			moveCar(2,car);
-			//xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY);// right
+			//moveCar(2,car);
+			xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY);// right
 		}
 		if((~PINC & (1<<PINC6)) != 0){
 			inp.direction = 1;
-			moveCar(1,car);
-			//xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY); //up
+			//moveCar(1,car);
+			xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY); //up
 		}
 		if((~PINC & (1<<PINC7)) != 0){
 			inp.direction = 3;
-			moveCar(3,car);
-			//xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY); //left
+			//moveCar(3,car);
+			xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY); //left
 		}
 		vTaskDelay(100);
 	}
@@ -370,7 +374,7 @@ void vApplicationIdleHook( void )
 int main(void)
 {	
 	init_board();
-	inputQueue = xQueueCreate(20, sizeof(struct input*));
+	inputQueue = xQueueCreate(20, sizeof(struct input));
 	
 	// Shift register Enable output (G=0)
 	PORTD &= ~_BV(PORTD6);
