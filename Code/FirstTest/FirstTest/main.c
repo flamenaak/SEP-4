@@ -212,7 +212,12 @@ void gameLogic_task(void *pvParameters)
 	while(1){
 		struct input inp;
 		if(xQueueReceive(inputQueue, (void*)&inp, portMAX_DELAY)){
+			if(inp.car[0] == car[0] && inp.car[1] == car[1]){
 			moveCar(inp.direction, car);
+			}
+			else if(inp.car[0] == car1[0] && inp.car[1] == car1[1]){
+				moveCar(inp.direction, car1);
+			}
 		}
 		vTaskDelay(70);
 	}
@@ -221,10 +226,10 @@ void gameLogic_task(void *pvParameters)
 void joystickSampler_task(void *pvParameters)
 {
 	struct input inp;
-	inp.car[0] = car[0];
-	inp.car[1] = car[1];
 	while(1)
 	{
+		inp.car[0] = car[0];
+		inp.car[1] = car[1];
 		if((~PINC & (1<<PINC0)) != 0){
 			inp.direction = 0;
 			//moveCar(0,car);
