@@ -32,6 +32,9 @@ static uint16_t myMatrix[14][10];
 static uint16_t car[2];
 static uint16_t car1[2];
 static xQueueHandle inputQueue;
+static int stop = 1;
+static int restart1 = 0;
+static int restart2 = 1;
 
 //----------------------------------------
 struct input{
@@ -162,61 +165,89 @@ void update(){
 										 {0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
 //-----------------------------------------
 void obstacles_task(void *pvParameters){
-	while(1){							
-		if(obstacles[car[0]][car[1]-1] == 0){
-			int count = 0;
-			uint8_t aux[14][10];
-			for(int i = 0; i < 14; i++){
-				for(int j = 0; j < 9; j++){
-					myMatrix[i][1+j] = obstacles[i][j];
+		#if (configUSE_APPLICATION_TASK_TAG == 1)
+		// Set task no to be used for tracing with R2R-Network
+		vTaskSetApplicationTaskTag( NULL, ( void * ) 2 );
+		#endif
+	while(1){
+		if(stop == 0){						
+			if(obstacles[car[0]][car[1]-1] == 0){
+				int count = 0;
+				uint8_t aux[14][10];
+				for(int i = 0; i < 14; i++){
+					for(int j = 0; j < 9; j++){
+						myMatrix[i][1+j] = obstacles[i][j];
+					}
 				}
-			}
-			for (int i = 1; i < 14; i++)
-			{
-				myMatrix[0][0] = rand()%2;
-				if(count < 2 || i == 13) {
-				myMatrix[i][0] = rand()%2;
-					if(myMatrix[i][0] == 1)
-					count++;
-					if(i % 4 == 0) count = 0;
-				}
-				else {
-				myMatrix[i][0] = 0;
-				}
+				for (int i = 1; i < 14; i++)
+				{
+					myMatrix[0][0] = rand()%2;
+					if(count < 2 || i == 13) {
+					myMatrix[i][0] = rand()%2;
+						if(myMatrix[i][0] == 1)
+						count++;
+						if(i % 4 == 0) count = 0;
+					}
+					else {
+					myMatrix[i][0] = 0;
+					}
 					
-			}
-			for(int i = 0; i < 14; i++){
-				for(int j = 0; j < 9; j++){
-					obstacles[i][j] = myMatrix[i][j];
 				}
+				for(int i = 0; i < 14; i++){
+					for(int j = 0; j < 9; j++){
+						obstacles[i][j] = myMatrix[i][j];
+					}
+				}
+				myMatrix[car[0]][car[1]] = 1;
 			}
-			myMatrix[car[0]][car[1]] = 1;
+			else{
+				stop = 1;
+			}
+				//update();
+				vTaskDelay(1000);
 		}
-			//update();
-			vTaskDelay(1000);
 	}
 }
 
 //-----------------------------------------
 void displayUpdater_task(void *pvParameters)
 {
+		#if (configUSE_APPLICATION_TASK_TAG == 1)
+		// Set task no to be used for tracing with R2R-Network
+		vTaskSetApplicationTaskTag( NULL, ( void * ) 3 );
+		#endif
 	while(1)
 	{
 	update();
-	vTaskDelay(60);
+	vTaskDelay(1000);
 	}
 }
 //-----------------------------------------
 void gameLogic_task(void *pvParameters)
 {	
+	#if (configUSE_APPLICATION_TASK_TAG == 1)
+	// Set task no to be used for tracing with R2R-Network
+	vTaskSetApplicationTaskTag( NULL, ( void * ) 4 );
+	#endif
+	
 	while(1){
-		struct input inp;
-		if(xQueueReceive(inputQueue, (void*)&inp, portMAX_DELAY)){
-			if(inp.car[0] == car[0] && inp.car[1] == car[1]){
-			moveCar(inp.direction, car);
+		if(stop == 0){
+			struct input inp;
+			if(xQueueReceive(inputQueue, (void*)&inp, portMAX_DELAY)){
+				if(inp.car[0] == car[0] && inp.car[1] == car[1]){
+				moveCar(inp.direction, car);
+				}
+				else if(inp.car[0] == car1[0] && inp.car[1] == car1[1]){
+					moveCar(inp.direction, car1);
+				}
 			}
-			else if(inp.car[0] == car1[0] && inp.car[1] == car1[1]){
-				moveCar(inp.direction, car1);
+		}
+		else{
+			if(restart1 + restart2 == 2){
+				stop = 0;
+				restart1 = 0;
+				restart2 = 1; //later 0 when we add a player
+				setupGame();
 			}
 		}
 		vTaskDelay(70);
@@ -225,35 +256,60 @@ void gameLogic_task(void *pvParameters)
 //-----------------------------------------
 void joystickSampler_task(void *pvParameters)
 {
+		#if (configUSE_APPLICATION_TASK_TAG == 1)
+		// Set task no to be used for tracing with R2R-Network
+		vTaskSetApplicationTaskTag( NULL, ( void * ) 5 );
+		#endif
 	struct input inp;
 	while(1)
 	{
-		inp.car[0] = car[0];
-		inp.car[1] = car[1];
-		if((~PINC & (1<<PINC0)) != 0){
-			inp.direction = 0;
-			//moveCar(0,car);
-			xQueueSend(inputQueue, (void*)&inp , portMAX_DELAY); //down
-		}
+		if(stop == 0)
+		{
+			inp.car[0] = car[0];
+			inp.car[1] = car[1];
+			if((~PINC & (1<<PINC0)) != 0){
+				inp.direction = 0;
+				//moveCar(0,car);
+				xQueueSend(inputQueue, (void*)&inp , portMAX_DELAY); //down
+			}
 
-		if((~PINC & (1<<PINC1)) != 0){
-			inp.direction = 2;
-			//moveCar(2,car);
-			xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY);// right
+			if((~PINC & (1<<PINC1)) != 0){
+				inp.direction = 2;
+				//moveCar(2,car);
+				xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY);// right
+			}
+			if((~PINC & (1<<PINC6)) != 0){
+				inp.direction = 1;
+				//moveCar(1,car);
+				xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY); //up
+			}
+			if((~PINC & (1<<PINC7)) != 0){
+				inp.direction = 3;
+				//moveCar(3,car);
+				xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY); //left
+			}
 		}
-		if((~PINC & (1<<PINC6)) != 0){
-			inp.direction = 1;
-			//moveCar(1,car);
-			xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY); //up
+		else{
+			if((~PIND & (1<<PIND3)) != 0){
+				restart1 = 1;
+			}
 		}
-		if((~PINC & (1<<PINC7)) != 0){
-			inp.direction = 3;
-			//moveCar(3,car);
-			xQueueSend(inputQueue, (void*)&inp, portMAX_DELAY); //left
-		}
-		vTaskDelay(100);
+		vTaskDelay(100);	
 	}
 }
+
+void setupGame(){
+		for(int i = 0; i < 14; i++){
+			for(int j = 0; j < 10; j++){
+				myMatrix[i][j] = 0;
+			}
+		}
+		car[0] = 6; //column
+		car[1] = 9; // row
+		myMatrix[car[0]][car[1]] = 1;
+		update();	
+}
+
 //-----------------------------------------
 void comSender_task(void *pvParameters)
 {
@@ -266,20 +322,7 @@ void comReceiver_task(void *pvParameters)
 }
 //-----------------------------------------
 void startup_task(void *pvParameters)
-{
-		BaseType_t result = 0;
-		uint8_t byte;
-		
-		for(int i = 0; i < 14; i++){
-			for(int j = 0; j < 10; j++){
-				myMatrix[i][j] = 0;
-			}
-		}
-		car[0] = 6; //column
-		car[1] = 9; // row
-		myMatrix[car[0]][car[1]] = 1;
-		update();
-	
+{	
 	// The parameters are not used
 	( void ) pvParameters;
 
@@ -288,6 +331,7 @@ void startup_task(void *pvParameters)
 	vTaskSetApplicationTaskTag( NULL, ( void * ) 1 );
 	#endif
 	
+	setupGame();
 	//_x_com_received_chars_queue = xQueueCreate( _COM_RX_QUEUE_LENGTH, ( unsigned portBASE_TYPE ) sizeof( uint8_t ) );
 	//init_com(_x_com_received_chars_queue);
 	
