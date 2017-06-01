@@ -1,0 +1,1323 @@
+Archive member included to satisfy reference by file (symbol)
+
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+                              src/serial/serial.o (__udivmodsi4)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+                              d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o (exit)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+                              src/FreeRTOS/Source/timers.o (__tablejump2__)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+                              main.o (__do_copy_data)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+                              main.o (__do_clear_bss)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
+                              src/serial/serial.o (malloc)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(rand.o)
+                              main.o (rand)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                              src/FreeRTOS/Source/queue.o (memcpy)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memset.o)
+                              src/FreeRTOS/Source/tasks.o (memset)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+                              d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(rand.o) (__divmodsi4)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+                              d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o) (__negsi2)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+                              d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(rand.o) (__muluhisi3)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+                              d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(rand.o) (__mulohisi3)
+d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+                              d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o) (__umulhisi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+__brkval            0x2               d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
+Input               0x6               main.o
+__flp               0x2               d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
+Car                 0x5               main.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+ .text          0x00000000        0x0 hamming/hamming.o
+ .data          0x00000000        0x0 hamming/hamming.o
+ .bss           0x00000000        0x0 hamming/hamming.o
+ .text.add_parity_bits
+                0x00000000        0x2 hamming/hamming.o
+ .text.check_parity_bits
+                0x00000000        0x2 hamming/hamming.o
+ .debug_info    0x00000000      0x182 hamming/hamming.o
+ .debug_abbrev  0x00000000       0xa0 hamming/hamming.o
+ .debug_aranges
+                0x00000000       0x28 hamming/hamming.o
+ .debug_ranges  0x00000000       0x18 hamming/hamming.o
+ .debug_line    0x00000000       0xa9 hamming/hamming.o
+ .debug_str     0x00000000      0x1d5 hamming/hamming.o
+ .comment       0x00000000       0x31 hamming/hamming.o
+ .debug_frame   0x00000000       0x34 hamming/hamming.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .text.vTimeout
+                0x00000000       0x14 main.o
+ .text.comSender_task
+                0x00000000       0x9e main.o
+ .text.comRec_tsk
+                0x00000000       0xa2 main.o
+ .bss.sender_timeout
+                0x00000000        0x2 main.o
+ .bss.ackFLAG   0x00000000        0x1 main.o
+ .bss.current_message
+                0x00000000        0x2 main.o
+ COMMON         0x00000000        0xb main.o
+ .text          0x00000000        0x0 src/board/board.o
+ .data          0x00000000        0x0 src/board/board.o
+ .bss           0x00000000        0x0 src/board/board.o
+ .text.init_com
+                0x00000000        0xa src/board/board.o
+ .text.com_send_bytes
+                0x00000000       0x12 src/board/board.o
+ .text          0x00000000        0x0 src/buffer/buffer.o
+ .data          0x00000000        0x0 src/buffer/buffer.o
+ .bss           0x00000000        0x0 src/buffer/buffer.o
+ .text.buffer_is_empty
+                0x00000000        0xe src/buffer/buffer.o
+ .text.buffer_no_of_items
+                0x00000000        0x6 src/buffer/buffer.o
+ .text.buffer_clear
+                0x00000000        0xa src/buffer/buffer.o
+ .text          0x00000000        0x0 src/FreeRTOS/Source/croutine.o
+ .data          0x00000000        0x0 src/FreeRTOS/Source/croutine.o
+ .bss           0x00000000        0x0 src/FreeRTOS/Source/croutine.o
+ .text.xCoRoutineCreate
+                0x00000000       0xf0 src/FreeRTOS/Source/croutine.o
+ .text.vCoRoutineAddToDelayedList
+                0x00000000       0x86 src/FreeRTOS/Source/croutine.o
+ .text.vCoRoutineSchedule
+                0x00000000      0x27a src/FreeRTOS/Source/croutine.o
+ .text.xCoRoutineRemoveFromEventList
+                0x00000000       0x4a src/FreeRTOS/Source/croutine.o
+ .bss.xPassedTicks
+                0x00000000        0x2 src/FreeRTOS/Source/croutine.o
+ .bss.xLastTickCount
+                0x00000000        0x2 src/FreeRTOS/Source/croutine.o
+ .bss.xCoRoutineTickCount
+                0x00000000        0x2 src/FreeRTOS/Source/croutine.o
+ .bss.uxTopCoRoutineReadyPriority
+                0x00000000        0x1 src/FreeRTOS/Source/croutine.o
+ .bss.pxCurrentCoRoutine
+                0x00000000        0x2 src/FreeRTOS/Source/croutine.o
+ .bss.xPendingReadyCoRoutineList
+                0x00000000        0x9 src/FreeRTOS/Source/croutine.o
+ .bss.pxOverflowDelayedCoRoutineList
+                0x00000000        0x2 src/FreeRTOS/Source/croutine.o
+ .bss.pxDelayedCoRoutineList
+                0x00000000        0x2 src/FreeRTOS/Source/croutine.o
+ .bss.xDelayedCoRoutineList2
+                0x00000000        0x9 src/FreeRTOS/Source/croutine.o
+ .bss.xDelayedCoRoutineList1
+                0x00000000        0x9 src/FreeRTOS/Source/croutine.o
+ .bss.pxReadyCoRoutineLists
+                0x00000000       0x12 src/FreeRTOS/Source/croutine.o
+ .debug_info    0x00000000      0x7ca src/FreeRTOS/Source/croutine.o
+ .debug_abbrev  0x00000000      0x257 src/FreeRTOS/Source/croutine.o
+ .debug_loc     0x00000000      0x3eb src/FreeRTOS/Source/croutine.o
+ .debug_aranges
+                0x00000000       0x38 src/FreeRTOS/Source/croutine.o
+ .debug_ranges  0x00000000       0x28 src/FreeRTOS/Source/croutine.o
+ .debug_line    0x00000000      0x3be src/FreeRTOS/Source/croutine.o
+ .debug_str     0x00000000      0x551 src/FreeRTOS/Source/croutine.o
+ .comment       0x00000000       0x31 src/FreeRTOS/Source/croutine.o
+ .debug_frame   0x00000000       0xc0 src/FreeRTOS/Source/croutine.o
+ .text          0x00000000        0x0 src/FreeRTOS/Source/event_groups.o
+ .data          0x00000000        0x0 src/FreeRTOS/Source/event_groups.o
+ .bss           0x00000000        0x0 src/FreeRTOS/Source/event_groups.o
+ .text.xEventGroupCreate
+                0x00000000       0x26 src/FreeRTOS/Source/event_groups.o
+ .text.xEventGroupWaitBits
+                0x00000000      0x110 src/FreeRTOS/Source/event_groups.o
+ .text.xEventGroupClearBits
+                0x00000000       0x1e src/FreeRTOS/Source/event_groups.o
+ .text.xEventGroupGetBitsFromISR
+                0x00000000        0x8 src/FreeRTOS/Source/event_groups.o
+ .text.xEventGroupSetBits
+                0x00000000       0xdc src/FreeRTOS/Source/event_groups.o
+ .text.xEventGroupSync
+                0x00000000       0xce src/FreeRTOS/Source/event_groups.o
+ .text.vEventGroupDelete
+                0x00000000       0x32 src/FreeRTOS/Source/event_groups.o
+ .text.vEventGroupSetBitsCallback
+                0x00000000        0x8 src/FreeRTOS/Source/event_groups.o
+ .text.vEventGroupClearBitsCallback
+                0x00000000        0x8 src/FreeRTOS/Source/event_groups.o
+ .text.uxEventGroupGetNumber
+                0x00000000        0xe src/FreeRTOS/Source/event_groups.o
+ .debug_info    0x00000000      0x992 src/FreeRTOS/Source/event_groups.o
+ .debug_abbrev  0x00000000      0x26b src/FreeRTOS/Source/event_groups.o
+ .debug_loc     0x00000000      0xb8a src/FreeRTOS/Source/event_groups.o
+ .debug_aranges
+                0x00000000       0x68 src/FreeRTOS/Source/event_groups.o
+ .debug_ranges  0x00000000       0x70 src/FreeRTOS/Source/event_groups.o
+ .debug_line    0x00000000      0x48a src/FreeRTOS/Source/event_groups.o
+ .debug_str     0x00000000      0x5d2 src/FreeRTOS/Source/event_groups.o
+ .comment       0x00000000       0x31 src/FreeRTOS/Source/event_groups.o
+ .debug_frame   0x00000000      0x168 src/FreeRTOS/Source/event_groups.o
+ .text          0x00000000        0x0 src/FreeRTOS/Source/list.o
+ .data          0x00000000        0x0 src/FreeRTOS/Source/list.o
+ .bss           0x00000000        0x0 src/FreeRTOS/Source/list.o
+ .text          0x00000000        0x0 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .data          0x00000000        0x0 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .bss           0x00000000        0x0 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .text.vPortEndScheduler
+                0x00000000        0x2 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .text          0x00000000        0x0 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .data          0x00000000        0x0 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .bss           0x00000000        0x0 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .text.vPortInitialiseBlocks
+                0x00000000        0xa src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .text.xPortGetFreeHeapSize
+                0x00000000       0x12 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .text          0x00000000        0x0 src/serial/serial.o
+ .data          0x00000000        0x0 src/serial/serial.o
+ .bss           0x00000000        0x0 src/serial/serial.o
+ .text.serial_send_byte
+                0x00000000       0x32 src/serial/serial.o
+ .text.serial_send_bytes
+                0x00000000       0x86 src/serial/serial.o
+ .text          0x00000000        0x0 src/FreeRTOS/Source/queue.o
+ .data          0x00000000        0x0 src/FreeRTOS/Source/queue.o
+ .bss           0x00000000        0x0 src/FreeRTOS/Source/queue.o
+ .text.xQueueGiveFromISR
+                0x00000000       0x52 src/FreeRTOS/Source/queue.o
+ .text.xQueueReceiveFromISR
+                0x00000000       0x6e src/FreeRTOS/Source/queue.o
+ .text.xQueuePeekFromISR
+                0x00000000       0x2e src/FreeRTOS/Source/queue.o
+ .text.uxQueueMessagesWaiting
+                0x00000000       0x10 src/FreeRTOS/Source/queue.o
+ .text.uxQueueSpacesAvailable
+                0x00000000       0x14 src/FreeRTOS/Source/queue.o
+ .text.uxQueueMessagesWaitingFromISR
+                0x00000000        0x6 src/FreeRTOS/Source/queue.o
+ .text.vQueueDelete
+                0x00000000        0x6 src/FreeRTOS/Source/queue.o
+ .text.uxQueueGetQueueNumber
+                0x00000000        0x6 src/FreeRTOS/Source/queue.o
+ .text.vQueueSetQueueNumber
+                0x00000000        0x6 src/FreeRTOS/Source/queue.o
+ .text.ucQueueGetQueueType
+                0x00000000        0x6 src/FreeRTOS/Source/queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x00000000        0xc src/FreeRTOS/Source/queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x00000000        0xe src/FreeRTOS/Source/queue.o
+ .text.xQueueCRSend
+                0x00000000       0x72 src/FreeRTOS/Source/queue.o
+ .text.xQueueCRReceive
+                0x00000000       0x92 src/FreeRTOS/Source/queue.o
+ .text.xQueueCRSendFromISR
+                0x00000000       0x48 src/FreeRTOS/Source/queue.o
+ .text.xQueueCRReceiveFromISR
+                0x00000000       0x82 src/FreeRTOS/Source/queue.o
+ .text          0x00000000        0x0 src/FreeRTOS/Source/tasks.o
+ .data          0x00000000        0x0 src/FreeRTOS/Source/tasks.o
+ .bss           0x00000000        0x0 src/FreeRTOS/Source/tasks.o
+ .text.vTaskDelete
+                0x00000000       0xaa src/FreeRTOS/Source/tasks.o
+ .text.eTaskGetState
+                0x00000000       0x5e src/FreeRTOS/Source/tasks.o
+ .text.vTaskEndScheduler
+                0x00000000        0xc src/FreeRTOS/Source/tasks.o
+ .text.xTaskGetTickCountFromISR
+                0x00000000        0xa src/FreeRTOS/Source/tasks.o
+ .text.uxTaskGetNumberOfTasks
+                0x00000000        0x6 src/FreeRTOS/Source/tasks.o
+ .text.pcTaskGetName
+                0x00000000       0x10 src/FreeRTOS/Source/tasks.o
+ .text.vTaskDelayUntil
+                0x00000000       0x80 src/FreeRTOS/Source/tasks.o
+ .text.xTaskGetApplicationTaskTag
+                0x00000000       0x1e src/FreeRTOS/Source/tasks.o
+ .text.xTaskCallApplicationTaskHook
+                0x00000000       0x24 src/FreeRTOS/Source/tasks.o
+ .text.vTaskPlaceOnUnorderedEventList
+                0x00000000       0x32 src/FreeRTOS/Source/tasks.o
+ .text.xTaskRemoveFromUnorderedEventList
+                0x00000000       0x74 src/FreeRTOS/Source/tasks.o
+ .text.uxTaskGetTaskNumber
+                0x00000000        0xe src/FreeRTOS/Source/tasks.o
+ .text.vTaskSetTaskNumber
+                0x00000000        0xa src/FreeRTOS/Source/tasks.o
+ .text.vTaskGetInfo
+                0x00000000       0xac src/FreeRTOS/Source/tasks.o
+ .text.prvListTasksWithinSingleList
+                0x00000000       0xb2 src/FreeRTOS/Source/tasks.o
+ .text.uxTaskGetSystemState
+                0x00000000       0xd0 src/FreeRTOS/Source/tasks.o
+ .text.xTaskGetCurrentTaskHandle
+                0x00000000        0xa src/FreeRTOS/Source/tasks.o
+ .text.uxTaskResetEventItemValue
+                0x00000000       0x2e src/FreeRTOS/Source/tasks.o
+ .text.ulTaskNotifyTake
+                0x00000000       0xb2 src/FreeRTOS/Source/tasks.o
+ .text.xTaskNotifyWait
+                0x00000000      0x108 src/FreeRTOS/Source/tasks.o
+ .text.xTaskGenericNotify
+                0x00000000       0xfc src/FreeRTOS/Source/tasks.o
+ .text.xTaskGenericNotifyFromISR
+                0x00000000      0x122 src/FreeRTOS/Source/tasks.o
+ .text.vTaskNotifyGiveFromISR
+                0x00000000       0xb6 src/FreeRTOS/Source/tasks.o
+ .text.xTaskNotifyStateClear
+                0x00000000       0x28 src/FreeRTOS/Source/tasks.o
+ .text          0x00000000        0x0 src/FreeRTOS/Source/timers.o
+ .data          0x00000000        0x0 src/FreeRTOS/Source/timers.o
+ .bss           0x00000000        0x0 src/FreeRTOS/Source/timers.o
+ .text.xTimerCreate
+                0x00000000       0x64 src/FreeRTOS/Source/timers.o
+ .text.xTimerGetTimerDaemonTaskHandle
+                0x00000000        0xa src/FreeRTOS/Source/timers.o
+ .text.xTimerGetPeriod
+                0x00000000        0x8 src/FreeRTOS/Source/timers.o
+ .text.xTimerGetExpiryTime
+                0x00000000        0x8 src/FreeRTOS/Source/timers.o
+ .text.pcTimerGetName
+                0x00000000        0x8 src/FreeRTOS/Source/timers.o
+ .text.xTimerIsTimerActive
+                0x00000000       0x1a src/FreeRTOS/Source/timers.o
+ .text.pvTimerGetTimerID
+                0x00000000       0x12 src/FreeRTOS/Source/timers.o
+ .text.vTimerSetTimerID
+                0x00000000       0x12 src/FreeRTOS/Source/timers.o
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc   0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(rand.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(rand.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memset.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memset.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memset.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+ .text.libgcc   0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+ .text.libgcc   0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc   0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+ .text          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+ .data          0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+ .bss           0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000003         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+LOAD hamming/hamming.o
+LOAD main.o
+LOAD src/board/board.o
+LOAD src/buffer/buffer.o
+LOAD src/FreeRTOS/Source/croutine.o
+LOAD src/FreeRTOS/Source/event_groups.o
+LOAD src/FreeRTOS/Source/list.o
+LOAD src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+LOAD src/FreeRTOS/Source/portable/MemMang/heap_1.o
+LOAD src/serial/serial.o
+LOAD src/FreeRTOS/Source/queue.o
+LOAD src/FreeRTOS/Source/tasks.o
+LOAD src/FreeRTOS/Source/timers.o
+START GROUP
+LOAD d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a
+END GROUP
+START GROUP
+LOAD d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a
+LOAD d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a
+LOAD d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a
+LOAD d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libatmega324pa.a
+END GROUP
+                0x00020000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                0x0000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                0x00010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x00000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x00000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x2c9a
+ *(.vectors)
+ .vectors       0x00000000       0x7c d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+                0x00000000                __vector_default
+                0x00000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table.prvTimerTask
+                0x0000007c       0x14 src/FreeRTOS/Source/timers.o
+                0x00000090                . = ALIGN (0x2)
+                0x00000090                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000090        0x0 linker stubs
+ *(.trampolines*)
+                0x00000090                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+                0x00000090                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000090                __ctors_start = .
+ *(.ctors)
+                0x00000090                __ctors_end = .
+                0x00000090                __dtors_start = .
+ *(.dtors)
+                0x00000090                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000090        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+                0x00000090                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000090        0xc d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000009c       0x16 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
+                0x0000009c                __do_copy_data
+ .init4         0x000000b2       0x10 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+                0x000000b2                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000c2        0x8 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+ *(.init9)
+ *(.text)
+ .text          0x000000ca        0x4 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+                0x000000ca                __vector_22
+                0x000000ca                __vector_1
+                0x000000ca                __vector_24
+                0x000000ca                __vector_12
+                0x000000ca                __bad_interrupt
+                0x000000ca                __vector_6
+                0x000000ca                __vector_3
+                0x000000ca                __vector_23
+                0x000000ca                __vector_30
+                0x000000ca                __vector_25
+                0x000000ca                __vector_11
+                0x000000ca                __vector_17
+                0x000000ca                __vector_19
+                0x000000ca                __vector_7
+                0x000000ca                __vector_27
+                0x000000ca                __vector_5
+                0x000000ca                __vector_4
+                0x000000ca                __vector_9
+                0x000000ca                __vector_2
+                0x000000ca                __vector_15
+                0x000000ca                __vector_8
+                0x000000ca                __vector_26
+                0x000000ca                __vector_14
+                0x000000ca                __vector_10
+                0x000000ca                __vector_18
+                0x000000ce                . = ALIGN (0x2)
+ *(.text.*)
+ .text.obstacles_task
+                0x000000ce      0x22c main.o
+                0x000000ce                obstacles_task
+ .text.joystickSampler_task
+                0x000002fa       0xee main.o
+                0x000002fa                joystickSampler_task
+ .text.update   0x000003e8       0x7e main.o
+                0x000003e8                update
+ .text.moveCar  0x00000466      0x2f8 main.o
+                0x00000466                moveCar
+ .text.displayUpdater_task
+                0x0000075e       0x1a main.o
+                0x0000075e                displayUpdater_task
+ .text.setupGame
+                0x00000778       0x50 main.o
+                0x00000778                setupGame
+ .text.gameLogic_task
+                0x000007c8      0x122 main.o
+                0x000007c8                gameLogic_task
+ .text.startup_task
+                0x000008ea       0x7c main.o
+                0x000008ea                startup_task
+ .text.prepare_shiftregister
+                0x00000966        0x4 main.o
+                0x00000966                prepare_shiftregister
+ .text.clock_shift_register_and_prepare_for_next_col
+                0x0000096a        0xc main.o
+                0x0000096a                clock_shift_register_and_prepare_for_next_col
+ .text.load_col_value
+                0x00000976       0x16 main.o
+                0x00000976                load_col_value
+ .text.handle_display
+                0x0000098c       0x52 main.o
+                0x0000098c                handle_display
+ .text.vApplicationIdleHook
+                0x000009de        0x2 main.o
+                0x000009de                vApplicationIdleHook
+ .text.main     0x000009e0       0x8a main.o
+                0x000009e0                main
+ .text._com_call_back
+                0x00000a6a       0x3e src/board/board.o
+ .text.init_display_timer
+                0x00000aa8       0x24 src/board/board.o
+                0x00000aa8                init_display_timer
+ .text.__vector_16
+                0x00000acc       0x52 src/board/board.o
+                0x00000acc                __vector_16
+ .text.init_board
+                0x00000b1e       0x94 src/board/board.o
+                0x00000b1e                init_board
+ .text.switch_in
+                0x00000bb2       0x16 src/board/board.o
+                0x00000bb2                switch_in
+ .text.switch_out
+                0x00000bc8        0x8 src/board/board.o
+                0x00000bc8                switch_out
+ .text.buffer_init
+                0x00000bd0        0xa src/buffer/buffer.o
+                0x00000bd0                buffer_init
+ .text.buffer_get_item
+                0x00000bda       0x42 src/buffer/buffer.o
+                0x00000bda                buffer_get_item
+ .text.buffer_put_item
+                0x00000c1c       0x3a src/buffer/buffer.o
+                0x00000c1c                buffer_put_item
+ .text.vListInitialise
+                0x00000c56       0x1c src/FreeRTOS/Source/list.o
+                0x00000c56                vListInitialise
+ .text.vListInitialiseItem
+                0x00000c72        0x8 src/FreeRTOS/Source/list.o
+                0x00000c72                vListInitialiseItem
+ .text.vListInsertEnd
+                0x00000c7a       0x42 src/FreeRTOS/Source/list.o
+                0x00000c7a                vListInsertEnd
+ .text.vListInsert
+                0x00000cbc       0x62 src/FreeRTOS/Source/list.o
+                0x00000cbc                vListInsert
+ .text.uxListRemove
+                0x00000d1e       0x4c src/FreeRTOS/Source/list.o
+                0x00000d1e                uxListRemove
+ .text.pxPortInitialiseStack
+                0x00000d6a       0xd8 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+                0x00000d6a                pxPortInitialiseStack
+ .text.xPortStartScheduler
+                0x00000e42       0x74 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+                0x00000e42                xPortStartScheduler
+ .text.vPortYield
+                0x00000eb6       0xb2 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+                0x00000eb6                vPortYield
+ .text.vPortYieldFromTick
+                0x00000f68       0xb8 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+                0x00000f68                vPortYieldFromTick
+ .text.__vector_13
+                0x00001020        0x6 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+                0x00001020                __vector_13
+ .text.pvPortMalloc
+                0x00001026       0x6a src/FreeRTOS/Source/portable/MemMang/heap_1.o
+                0x00001026                pvPortMalloc
+ .text.vPortFree
+                0x00001090        0x2 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+                0x00001090                vPortFree
+ .text.serial_new_instance
+                0x00001092       0xf4 src/serial/serial.o
+                0x00001092                serial_new_instance
+ .text.__vector_20
+                0x00001186       0x7c src/serial/serial.o
+                0x00001186                __vector_20
+ .text.__vector_21
+                0x00001202       0x90 src/serial/serial.o
+                0x00001202                __vector_21
+ .text.__vector_28
+                0x00001292       0x7c src/serial/serial.o
+                0x00001292                __vector_28
+ .text.__vector_29
+                0x0000130e       0x90 src/serial/serial.o
+                0x0000130e                __vector_29
+ .text.prvCopyDataToQueue
+                0x0000139e       0xc2 src/FreeRTOS/Source/queue.o
+ .text.prvCopyDataFromQueue
+                0x00001460       0x34 src/FreeRTOS/Source/queue.o
+ .text.prvUnlockQueue
+                0x00001494       0x9a src/FreeRTOS/Source/queue.o
+ .text.xQueueGenericReset
+                0x0000152e       0x7a src/FreeRTOS/Source/queue.o
+                0x0000152e                xQueueGenericReset
+ .text.xQueueGenericCreate
+                0x000015a8       0x62 src/FreeRTOS/Source/queue.o
+                0x000015a8                xQueueGenericCreate
+ .text.xQueueGenericSend
+                0x0000160a      0x142 src/FreeRTOS/Source/queue.o
+                0x0000160a                xQueueGenericSend
+ .text.xQueueCreateMutex
+                0x0000174c       0x34 src/FreeRTOS/Source/queue.o
+                0x0000174c                xQueueCreateMutex
+ .text.xQueueGenericSendFromISR
+                0x00001780       0x74 src/FreeRTOS/Source/queue.o
+                0x00001780                xQueueGenericSendFromISR
+ .text.xQueueGenericReceive
+                0x000017f4      0x198 src/FreeRTOS/Source/queue.o
+                0x000017f4                xQueueGenericReceive
+ .text.vQueueWaitForMessageRestricted
+                0x0000198c       0x3a src/FreeRTOS/Source/queue.o
+                0x0000198c                vQueueWaitForMessageRestricted
+ .text.prvResetNextTaskUnblockTime
+                0x000019c6       0x3e src/FreeRTOS/Source/tasks.o
+ .text.prvAddCurrentTaskToDelayedList
+                0x00001a04       0x88 src/FreeRTOS/Source/tasks.o
+ .text.xTaskCreate
+                0x00001a8c      0x232 src/FreeRTOS/Source/tasks.o
+                0x00001a8c                xTaskCreate
+ .text.vTaskStartScheduler
+                0x00001cbe       0x5c src/FreeRTOS/Source/tasks.o
+                0x00001cbe                vTaskStartScheduler
+ .text.vTaskSuspendAll
+                0x00001d1a        0xc src/FreeRTOS/Source/tasks.o
+                0x00001d1a                vTaskSuspendAll
+ .text.xTaskGetTickCount
+                0x00001d26       0x14 src/FreeRTOS/Source/tasks.o
+                0x00001d26                xTaskGetTickCount
+ .text.xTaskIncrementTick
+                0x00001d3a      0x176 src/FreeRTOS/Source/tasks.o
+                0x00001d3a                xTaskIncrementTick
+ .text.xTaskResumeAll
+                0x00001eb0       0xfe src/FreeRTOS/Source/tasks.o
+                0x00001eb0                xTaskResumeAll
+ .text.vTaskDelay
+                0x00001fae       0x28 src/FreeRTOS/Source/tasks.o
+                0x00001fae                vTaskDelay
+ .text.prvIdleTask
+                0x00001fd6       0x7e src/FreeRTOS/Source/tasks.o
+ .text.vTaskSetApplicationTaskTag
+                0x00002054       0x1e src/FreeRTOS/Source/tasks.o
+                0x00002054                vTaskSetApplicationTaskTag
+ .text.vTaskSwitchContext
+                0x00002072       0xe8 src/FreeRTOS/Source/tasks.o
+                0x00002072                vTaskSwitchContext
+ .text.vTaskPlaceOnEventList
+                0x0000215a       0x26 src/FreeRTOS/Source/tasks.o
+                0x0000215a                vTaskPlaceOnEventList
+ .text.vTaskPlaceOnEventListRestricted
+                0x00002180       0x34 src/FreeRTOS/Source/tasks.o
+                0x00002180                vTaskPlaceOnEventListRestricted
+ .text.xTaskRemoveFromEventList
+                0x000021b4       0x90 src/FreeRTOS/Source/tasks.o
+                0x000021b4                xTaskRemoveFromEventList
+ .text.vTaskSetTimeOutState
+                0x00002244       0x16 src/FreeRTOS/Source/tasks.o
+                0x00002244                vTaskSetTimeOutState
+ .text.xTaskCheckForTimeOut
+                0x0000225a       0x64 src/FreeRTOS/Source/tasks.o
+                0x0000225a                xTaskCheckForTimeOut
+ .text.vTaskMissedYield
+                0x000022be        0x8 src/FreeRTOS/Source/tasks.o
+                0x000022be                vTaskMissedYield
+ .text.xTaskGetSchedulerState
+                0x000022c6       0x1c src/FreeRTOS/Source/tasks.o
+                0x000022c6                xTaskGetSchedulerState
+ .text.vTaskPriorityInherit
+                0x000022e2       0xc4 src/FreeRTOS/Source/tasks.o
+                0x000022e2                vTaskPriorityInherit
+ .text.xTaskPriorityDisinherit
+                0x000023a6       0x80 src/FreeRTOS/Source/tasks.o
+                0x000023a6                xTaskPriorityDisinherit
+ .text.pvTaskIncrementMutexHeldCount
+                0x00002426       0x24 src/FreeRTOS/Source/tasks.o
+                0x00002426                pvTaskIncrementMutexHeldCount
+ .text.prvInsertTimerInActiveList
+                0x0000244a       0x5e src/FreeRTOS/Source/timers.o
+ .text.prvCheckForValidListAndQueue
+                0x000024a8       0x52 src/FreeRTOS/Source/timers.o
+ .text.xTimerCreateTimerTask
+                0x000024fa       0x44 src/FreeRTOS/Source/timers.o
+                0x000024fa                xTimerCreateTimerTask
+ .text.xTimerGenericCommand
+                0x0000253e       0x90 src/FreeRTOS/Source/timers.o
+                0x0000253e                xTimerGenericCommand
+ .text.prvSampleTimeNow
+                0x000025ce       0xe0 src/FreeRTOS/Source/timers.o
+ .text.prvTimerTask
+                0x000026ae      0x1e4 src/FreeRTOS/Source/timers.o
+ .text.libgcc.div
+                0x00002892       0x44 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+                0x00002892                __udivmodsi4
+ .text.libgcc   0x000028d6        0xc d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+                0x000028d6                __tablejump2__
+ .text.avr-libc
+                0x000028e2      0x25a d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x000028e2                malloc
+                0x00002a0c                free
+ .text.avr-libc
+                0x00002b3c       0xb8 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(rand.o)
+                0x00002bce                rand_r
+                0x00002bd4                rand
+                0x00002bde                srand
+ .text.avr-libc
+                0x00002bf4       0x12 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                0x00002bf4                memcpy
+ .text.avr-libc
+                0x00002c06        0xe d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memset.o)
+                0x00002c06                memset
+ .text.libgcc.div
+                0x00002c14       0x2e d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_divmodsi4.o)
+                0x00002c14                __divmodsi4
+ .text.libgcc.div
+                0x00002c42       0x10 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_negsi2.o)
+                0x00002c42                __negsi2
+ .text.libgcc.mul
+                0x00002c52       0x16 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+                0x00002c52                __muluhisi3
+ .text.libgcc.mul
+                0x00002c68       0x10 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulshisi3.o)
+                0x00002c68                __mulshisi3
+                0x00002c6e                __mulohisi3
+ .text.libgcc.mul
+                0x00002c78       0x1e d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+                0x00002c78                __umulhisi3
+                0x00002c96                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00002c96        0x0 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+                0x00002c96                _exit
+                0x00002c96                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00002c96        0x4 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00002c9a                _etext = .
+
+.data           0x00800100       0x5c load address 0x00002c9a
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x6 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00800100                __malloc_heap_end
+                0x00800102                __malloc_heap_start
+                0x00800104                __malloc_margin
+ .data          0x00800106        0x4 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(rand.o)
+ *(.data*)
+ .data.restart2
+                0x0080010a        0x2 main.o
+ .data._com_port_2_udr
+                0x0080010c        0x4 src/serial/serial.o
+                0x0080010c                _com_port_2_udr
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x00800110       0x3e main.o
+ .rodata.str1.1
+                0x0080014e        0x5 src/FreeRTOS/Source/tasks.o
+ .rodata.str1.1
+                0x00800153        0x8 src/FreeRTOS/Source/timers.o
+ *(.gnu.linkonce.d*)
+                0x0080015c                . = ALIGN (0x2)
+ *fill*         0x0080015b        0x1 
+                0x0080015c                _edata = .
+                0x0080015c                PROVIDE (__data_end, .)
+
+.bss            0x0080015c      0x8aa
+                0x0080015c                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.col.2112  0x0080015c        0x1 main.o
+ .bss.restart1  0x0080015d        0x2 main.o
+ .bss.stop      0x0080015f        0x2 main.o
+ .bss.car1      0x00800161        0x4 main.o
+ .bss.car       0x00800165        0x4 main.o
+ .bss.myMatrix  0x00800169      0x118 main.o
+ .bss.obstacles
+                0x00800281       0x8c main.o
+ .bss.frame_buf
+                0x0080030d       0x1c main.o
+ .bss.xInputQueue
+                0x00800329        0x2 main.o
+ .bss.xCommandQueue
+                0x0080032b        0x2 main.o
+ .bss.xACKQueue
+                0x0080032d        0x2 main.o
+ .bss.xSendQueue
+                0x0080032f        0x2 main.o
+ .bss.xMutex    0x00800331        0x2 main.o
+ .bss._x_com_received_chars_queue
+                0x00800333        0x2 main.o
+ .bss._com_tx_buffer.2010
+                0x00800335       0x23 src/board/board.o
+ .bss._com_rx_buffer.2009
+                0x00800358       0x23 src/board/board.o
+ .bss.cb_ptr    0x0080037b        0x2 src/board/board.o
+ .bss._x_rx_com_queue
+                0x0080037d        0x2 src/board/board.o
+ .bss._com_serial_instance
+                0x0080037f        0x2 src/board/board.o
+ .bss.pucAlignedHeap.1965
+                0x00800381        0x2 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .bss.xNextFreeByte
+                0x00800383        0x2 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .bss.ucHeap    0x00800385      0x5dc src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .bss._ser_handle
+                0x00800961        0x4 src/serial/serial.o
+ .bss.uxSchedulerSuspended
+                0x00800965        0x1 src/FreeRTOS/Source/tasks.o
+ .bss.xIdleTaskHandle
+                0x00800966        0x2 src/FreeRTOS/Source/tasks.o
+ .bss.xNextTaskUnblockTime
+                0x00800968        0x2 src/FreeRTOS/Source/tasks.o
+ .bss.uxTaskNumber
+                0x0080096a        0x1 src/FreeRTOS/Source/tasks.o
+ .bss.xNumOfOverflows
+                0x0080096b        0x1 src/FreeRTOS/Source/tasks.o
+ .bss.xYieldPending
+                0x0080096c        0x1 src/FreeRTOS/Source/tasks.o
+ .bss.uxPendedTicks
+                0x0080096d        0x1 src/FreeRTOS/Source/tasks.o
+ .bss.xSchedulerRunning
+                0x0080096e        0x1 src/FreeRTOS/Source/tasks.o
+ .bss.uxTopReadyPriority
+                0x0080096f        0x1 src/FreeRTOS/Source/tasks.o
+ .bss.xTickCount
+                0x00800970        0x2 src/FreeRTOS/Source/tasks.o
+ .bss.uxCurrentNumberOfTasks
+                0x00800972        0x1 src/FreeRTOS/Source/tasks.o
+ .bss.uxDeletedTasksWaitingCleanUp
+                0x00800973        0x1 src/FreeRTOS/Source/tasks.o
+ .bss.xTasksWaitingTermination
+                0x00800974        0x9 src/FreeRTOS/Source/tasks.o
+ .bss.xPendingReadyList
+                0x0080097d        0x9 src/FreeRTOS/Source/tasks.o
+ .bss.pxOverflowDelayedTaskList
+                0x00800986        0x2 src/FreeRTOS/Source/tasks.o
+ .bss.pxDelayedTaskList
+                0x00800988        0x2 src/FreeRTOS/Source/tasks.o
+ .bss.xDelayedTaskList2
+                0x0080098a        0x9 src/FreeRTOS/Source/tasks.o
+ .bss.xDelayedTaskList1
+                0x00800993        0x9 src/FreeRTOS/Source/tasks.o
+ .bss.pxReadyTasksLists
+                0x0080099c       0x48 src/FreeRTOS/Source/tasks.o
+ .bss.pxCurrentTCB
+                0x008009e4        0x2 src/FreeRTOS/Source/tasks.o
+                0x008009e4                pxCurrentTCB
+ .bss.xLastTime.2242
+                0x008009e6        0x2 src/FreeRTOS/Source/timers.o
+ .bss.xTimerTaskHandle
+                0x008009e8        0x2 src/FreeRTOS/Source/timers.o
+ .bss.xTimerQueue
+                0x008009ea        0x2 src/FreeRTOS/Source/timers.o
+ .bss.pxOverflowTimerList
+                0x008009ec        0x2 src/FreeRTOS/Source/timers.o
+ .bss.pxCurrentTimerList
+                0x008009ee        0x2 src/FreeRTOS/Source/timers.o
+ .bss.xActiveTimerList2
+                0x008009f0        0x9 src/FreeRTOS/Source/timers.o
+ .bss.xActiveTimerList1
+                0x008009f9        0x9 src/FreeRTOS/Source/timers.o
+ *(COMMON)
+ COMMON         0x00800a02        0x4 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00800a02                __brkval
+                0x00800a04                __flp
+                0x00800a06                PROVIDE (__bss_end, .)
+                0x00002c9a                __data_load_start = LOADADDR (.data)
+                0x00002cf6                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800a06        0x0
+                [!provide]                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                PROVIDE (__noinit_end, .)
+                0x00800a06                _end = .
+                0x00800a06                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x30
+ *(.comment)
+ .comment       0x00000000       0x30 main.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000030       0x31 src/board/board.o
+ .comment       0x00000030       0x31 src/buffer/buffer.o
+ .comment       0x00000030       0x31 src/FreeRTOS/Source/list.o
+ .comment       0x00000030       0x31 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .comment       0x00000030       0x31 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .comment       0x00000030       0x31 src/serial/serial.o
+ .comment       0x00000030       0x31 src/FreeRTOS/Source/queue.o
+ .comment       0x00000030       0x31 src/FreeRTOS/Source/tasks.o
+ .comment       0x00000030       0x31 src/FreeRTOS/Source/timers.o
+ .comment       0x00000030       0x31 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
+ .comment       0x00000030       0x31 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(rand.o)
+
+.note.gnu.avr.deviceinfo
+                0x00000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x00000000       0x40 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x548
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0xa0 main.o
+ .debug_aranges
+                0x000000a0       0x58 src/board/board.o
+ .debug_aranges
+                0x000000f8       0x48 src/buffer/buffer.o
+ .debug_aranges
+                0x00000140       0x40 src/FreeRTOS/Source/list.o
+ .debug_aranges
+                0x00000180       0x48 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .debug_aranges
+                0x000001c8       0x38 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_aranges
+                0x00000200       0x50 src/serial/serial.o
+ .debug_aranges
+                0x00000250       0xe8 src/FreeRTOS/Source/queue.o
+ .debug_aranges
+                0x00000338      0x188 src/FreeRTOS/Source/tasks.o
+ .debug_aranges
+                0x000004c0       0x88 src/FreeRTOS/Source/timers.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x7487
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x6cc d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+ .debug_info    0x000006cc     0x10fe main.o
+ .debug_info    0x000017ca      0x545 src/board/board.o
+ .debug_info    0x00001d0f      0x20d src/buffer/buffer.o
+ .debug_info    0x00001f1c      0x2cd src/FreeRTOS/Source/list.o
+ .debug_info    0x000021e9      0x261 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .debug_info    0x0000244a      0x1ad src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_info    0x000025f7      0x58c src/serial/serial.o
+ .debug_info    0x00002b83     0x16db src/FreeRTOS/Source/queue.o
+ .debug_info    0x0000425e     0x2169 src/FreeRTOS/Source/tasks.o
+ .debug_info    0x000063c7     0x10c0 src/FreeRTOS/Source/timers.o
+
+.debug_abbrev   0x00000000     0x1c70
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x66e d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+ .debug_abbrev  0x0000066e      0x381 main.o
+ .debug_abbrev  0x000009ef      0x1df src/board/board.o
+ .debug_abbrev  0x00000bce       0xde src/buffer/buffer.o
+ .debug_abbrev  0x00000cac       0xf8 src/FreeRTOS/Source/list.o
+ .debug_abbrev  0x00000da4      0x167 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .debug_abbrev  0x00000f0b      0x12e src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_abbrev  0x00001039      0x20c src/serial/serial.o
+ .debug_abbrev  0x00001245      0x319 src/FreeRTOS/Source/queue.o
+ .debug_abbrev  0x0000155e      0x3c6 src/FreeRTOS/Source/tasks.o
+ .debug_abbrev  0x00001924      0x34c src/FreeRTOS/Source/timers.o
+
+.debug_line     0x00000000     0x37e7
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000       0x1a d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+ .debug_line    0x0000001a      0x75b main.o
+ .debug_line    0x00000775      0x279 src/board/board.o
+ .debug_line    0x000009ee      0x186 src/buffer/buffer.o
+ .debug_line    0x00000b74      0x21f src/FreeRTOS/Source/list.o
+ .debug_line    0x00000d93      0x2c5 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .debug_line    0x00001058      0x208 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_line    0x00001260      0x2ff src/serial/serial.o
+ .debug_line    0x0000155f      0xb2f src/FreeRTOS/Source/queue.o
+ .debug_line    0x0000208e     0x11ce src/FreeRTOS/Source/tasks.o
+ .debug_line    0x0000325c      0x58b src/FreeRTOS/Source/timers.o
+
+.debug_frame    0x00000000     0x1134
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x1a4 main.o
+ .debug_frame   0x000001a4      0x114 src/board/board.o
+ .debug_frame   0x000002b8       0x74 src/buffer/buffer.o
+ .debug_frame   0x0000032c       0x88 src/FreeRTOS/Source/list.o
+ .debug_frame   0x000003b4       0x74 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .debug_frame   0x00000428       0x60 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_frame   0x00000488      0x248 src/serial/serial.o
+ .debug_frame   0x000006d0      0x344 src/FreeRTOS/Source/queue.o
+ .debug_frame   0x00000a14      0x584 src/FreeRTOS/Source/tasks.o
+ .debug_frame   0x00000f98      0x19c src/FreeRTOS/Source/timers.o
+
+.debug_str      0x00000000     0x210c
+ *(.debug_str)
+ .debug_str     0x00000000      0x255 d:/ict engineering/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega324pa.o
+ .debug_str     0x00000255      0x4d6 main.o
+                                0x535 (size before relaxing)
+ .debug_str     0x0000072b      0x267 src/board/board.o
+                                0x449 (size before relaxing)
+ .debug_str     0x00000992       0x67 src/buffer/buffer.o
+                                0x21e (size before relaxing)
+ .debug_str     0x000009f9      0x13b src/FreeRTOS/Source/list.o
+                                0x2bf (size before relaxing)
+ .debug_str     0x00000b34      0x11b src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+                                0x2d0 (size before relaxing)
+ .debug_str     0x00000c4f       0xd2 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+                                0x24c (size before relaxing)
+ .debug_str     0x00000d21       0xf4 src/serial/serial.o
+                                0x418 (size before relaxing)
+ .debug_str     0x00000e15      0x57a src/FreeRTOS/Source/queue.o
+                                0x8ae (size before relaxing)
+ .debug_str     0x0000138f      0x988 src/FreeRTOS/Source/tasks.o
+                                0xf2c (size before relaxing)
+ .debug_str     0x00001d17      0x3f5 src/FreeRTOS/Source/timers.o
+                                0x823 (size before relaxing)
+
+.debug_loc      0x00000000     0x66f6
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x5cc main.o
+ .debug_loc     0x000005cc      0x2bb src/board/board.o
+ .debug_loc     0x00000887       0xc0 src/buffer/buffer.o
+ .debug_loc     0x00000947      0x145 src/FreeRTOS/Source/list.o
+ .debug_loc     0x00000a8c      0x2ac src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .debug_loc     0x00000d38       0xf1 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_loc     0x00000e29      0x916 src/serial/serial.o
+ .debug_loc     0x0000173f     0x1e81 src/FreeRTOS/Source/queue.o
+ .debug_loc     0x000035c0     0x2491 src/FreeRTOS/Source/tasks.o
+ .debug_loc     0x00005a51      0xca5 src/FreeRTOS/Source/timers.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x700
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x180 main.o
+ .debug_ranges  0x00000180       0x48 src/board/board.o
+ .debug_ranges  0x000001c8       0x38 src/buffer/buffer.o
+ .debug_ranges  0x00000200       0x30 src/FreeRTOS/Source/list.o
+ .debug_ranges  0x00000230       0x38 src/FreeRTOS/Source/portable/GCC/ATMega324/port.o
+ .debug_ranges  0x00000268       0x28 src/FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_ranges  0x00000290       0x58 src/serial/serial.o
+ .debug_ranges  0x000002e8      0x150 src/FreeRTOS/Source/queue.o
+ .debug_ranges  0x00000438      0x1f0 src/FreeRTOS/Source/tasks.o
+ .debug_ranges  0x00000628       0xd8 src/FreeRTOS/Source/timers.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(FreeRTOS-Test2.elf elf32-avr)
+LOAD linker stubs
