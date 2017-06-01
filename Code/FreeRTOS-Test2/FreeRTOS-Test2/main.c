@@ -67,6 +67,11 @@ struct input{
 	uint16_t car[2];
 }Input;
 
+struct input1{
+	uint16_t direction;
+	uint16_t car1[2];
+};
+
 struct car{
 	uint16_t x,y;
 	uint8_t computer;
@@ -139,7 +144,7 @@ void obstacles_task(void *pvParameters){
 	
 	while(1){		
 						if(stop == 0){
-							if(obstacles[car[0]][car[1]-1] == 0){
+							if(obstacles[car[0]][car[1]-1] == 0 && obstacles[car1[0]][car1[1]-1] == 0){
 								if(xSemaphoreTake(xMutex, portMAX_DELAY)){
 											int count = 0;
 											for(int i = 0; i < 14; i++){
@@ -167,8 +172,10 @@ void obstacles_task(void *pvParameters){
 												}
 											}
 											myMatrix[car[0]][car[1]] = 1;
+											myMatrix[car1[0]][car1[1]] = 1;
 											xSemaphoreGive(xMutex);
 										}
+										
 									}
 									else{
 										stop = 1;
@@ -217,15 +224,15 @@ void gameLogic_task(void *pvParameters)
 									xSemaphoreGive(xMutex);
 									}
 							}				
-							vTaskDelay(50);			
 				}
 				else{
-					if(restart1 + restart2 == 2){
+					if(restart1 + restart2 + stop == 2){
 						stop = 0;
 						restart1 = 0;
 						restart2 = 1; //later 0 when we add a player
 						setupGame();
 					}
+				vTaskDelay(50);			
 				}
 				
 			
@@ -283,9 +290,14 @@ void setupGame(){
 			obstacles[i][j] = 0;
 		}
 	}
-	car[0] = 6; //column				//Start position for the first car
+	car[0] = 5; //column				//Start position for the first car
 	car[1] = 9; // row
+
+	car1[0] = 9; //column				//Start position for the second car
+	car1[1] = 7; // row
+
 	myMatrix[car[0]][car[1]] = 1;		//Placement of the car on the matrix
+	myMatrix[car1[0]][car1[1]] = 1;		//Placement of the car on the matrix
 	//update();
 }
 
