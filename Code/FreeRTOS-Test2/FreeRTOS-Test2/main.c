@@ -57,7 +57,7 @@ static uint8_t obstacles[14][10];
 static uint16_t myMatrix[14][10]; //guarded by mutex
 static uint16_t car[2];
 static uint16_t car1[2];
-static int stop = 0;
+static int stop = 1;
 static int restart1 = 0;
 static int restart2 = 1;
 
@@ -85,27 +85,21 @@ void moveCar (uint16_t direction, uint16_t car[2]){
 		if((car[1] + 1 <= 9) && myMatrix[car[0]][car[1] + 1] == 0){
 			myMatrix[car[0]][car[1]] = 0;
 			myMatrix[car[0]][++car[1]] = 1;
-			update();
-		vTaskDelay(200);}
 		break;
-		
+		}
 		
 		case 1:
 		if(car[1] >= 1 && myMatrix[car[0]][car[1] - 1] == 0){
 			myMatrix[car[0]][car[1]] = 0;
 			--car[1];
 			myMatrix[car[0]][car[1]] = 1;
-			update();
-			vTaskDelay(200);
-		}
+			}
 		
 		break;
 		case 2:
 		if((car[0] + 1 <= 13) && myMatrix[car[0] + 1][car[1]] == 0){
 			myMatrix[car[0]][car[1]] = 0;
 			myMatrix[++car[0]][car[1]] = 1;
-			update();
-			vTaskDelay(200);
 		}
 		
 		break;
@@ -113,8 +107,6 @@ void moveCar (uint16_t direction, uint16_t car[2]){
 		if((car[0] >= 1) && myMatrix[car[0] - 1][car[1]] == 0){
 			myMatrix[car[0]][car[1]] = 0;
 			myMatrix[--car[0]][car[1]] = 1;
-			update();
-			vTaskDelay(200);
 		}
 		
 		break;
@@ -212,7 +204,7 @@ void gameLogic_task(void *pvParameters)
 				if(stop == 0){
 					struct input inp;
 							
-							if(xQueueReceive(xInputQueue, (void*)&inp, portMAX_DELAY)){
+							if(xQueueReceive(xInputQueue, (void*)&inp, 2000)){
 									if(xSemaphoreTake(xMutex, portMAX_DELAY)){
 											if(inp.car[0] == car[0] && inp.car[1] == car[1]){
 												moveCar(inp.direction, car);
@@ -396,16 +388,13 @@ void startup_task(void *pvParameters)
 	
 	xMutex = xSemaphoreCreateMutex();  // Initialise Mutex
 		
-	BaseType_t tDU = xTaskCreate(displayUpdater_task, (const char *)"Display updater", configMINIMAL_STACK_SIZE, (void *)NULL, 2, NULL);
-	BaseType_t tGL = xTaskCreate(gameLogic_task, (const char *)"Game logic", configMINIMAL_STACK_SIZE, (void *)NULL, 7, NULL);
-	BaseType_t t2 = xTaskCreate(obstacles_task, (const char *)"Obstacles", configMINIMAL_STACK_SIZE, (void *)NULL, 6, NULL);
-	BaseType_t tJS = xTaskCreate(joystickSampler_task, (const char *)"Joystick sampler", configMINIMAL_STACK_SIZE, (void *)NULL, 3, NULL);
+	BaseType_t tDU = xTaskCreate(displayUpdater_task, (const char *)"Display updater", configMINIMAL_STACK_SIZE, (void *)NULL, tskIDLE_PRIORITY + 2, NULL);
+	BaseType_t tGL = xTaskCreate(gameLogic_task, (const char *)"Game logic", configMINIMAL_STACK_SIZE, (void *)NULL, tskIDLE_PRIORITY + 7, NULL);
+	BaseType_t t2 = xTaskCreate(obstacles_task, (const char *)"Obstacles", configMINIMAL_STACK_SIZE, (void *)NULL, tskIDLE_PRIORITY + 6, NULL);
+	BaseType_t tJS = xTaskCreate(joystickSampler_task, (const char *)"Joystick sampler", configMINIMAL_STACK_SIZE, (void *)NULL, tskIDLE_PRIORITY + 3, NULL);
 	
-	
-	
-	
-	//BaseType_t tCS1 = xTaskCreate(comSender_task, (const char *)"Communication sender", configMINIMAL_STACK_SIZE, (void *)NULL, 5, NULL);
-	//BaseType_t tCR1 = xTaskCreate(comReceiver_task, (const char *)"Communication receiver", configMINIMAL_STACK_SIZE, (void *)NULL, 4, NULL);
+	BaseType_t tCS1 = xTaskCreate(comSender_task, (const char *)"Communication sender", configMINIMAL_STACK_SIZE, (void *)NULL, tskIDLE_PRIORITY + 5, NULL);
+	BaseType_t tCR1 = xTaskCreate(comReceiver_task, (const char *)"Communication receiver", configMINIMAL_STACK_SIZE, (void *)NULL, tskIDLE_PRIORITY + 4, NULL);
 	//BaseType_t tOBS = xTaskCreate(obstacles_task, (const char *)"Obstacles", configMINIMAL_STACK_SIZE, (void *)NULL, 1, NULL);
 	
 	
