@@ -30,7 +30,6 @@ static uint8_t *current_message;
 static uint8_t ackFLAG = 0;
 static xQueueHandle xSendQueue;
 static xQueueHandle xACKQueue;
-static xQueueHandle xCommandQueue;
 static xQueueHandle xInputQueue;
 
 
@@ -320,7 +319,7 @@ void comSender_task(void *pvParameters)
 		
 }
 //-----------------------------------------
-void comRec_tsk(void *pvParameters)
+void comReceiver_task(void *pvParameters)
 {
 	
 		while (1) {
@@ -347,8 +346,7 @@ void comRec_tsk(void *pvParameters)
 						if (result && (1 << i)) cmd += 1 << i;
 					}
 					xQueueSend(xACKQueue, &ack, 1000L);  //send ack
-					xQueueSend(xCommandQueue, &cmd, 1000L); // send cmd
-
+					xQueueSend(xInputQueue, &cmd, 1000L);
 				}
 				if (type == (1 << 7)) //ACK
 				{
@@ -384,13 +382,8 @@ void startup_task(void *pvParameters)
 	
 	setupGame();
 	
-	
-	
 	xMutex = xSemaphoreCreateMutex();  // Initialise Mutex
-	
-
-	//BaseType_t t1 = xTaskCreate(another_task, (const char *)"Another", configMINIMAL_STACK_SIZE, (void *)NULL, 5, NULL);
-	
+		
 	BaseType_t tDU = xTaskCreate(displayUpdater_task, (const char *)"Display updater", configMINIMAL_STACK_SIZE, (void *)NULL, 2, NULL);
 	BaseType_t tGL = xTaskCreate(gameLogic_task, (const char *)"Game logic", configMINIMAL_STACK_SIZE, (void *)NULL, 7, NULL);
 	BaseType_t t2 = xTaskCreate(obstacles_task, (const char *)"Obstacles", configMINIMAL_STACK_SIZE, (void *)NULL, 6, NULL);
@@ -479,10 +472,9 @@ int main(void)
 	//init_com(_x_com_received_chars_queue);
 	//sender_timeout = xTimerCreate("Timeout", pdMS_TO_TICKS(100), pdFALSE, 1, vTimeout);
 
-	xSendQueue = xQueueCreate(20, sizeof(unsigned char));
-	xACKQueue = xQueueCreate(20, sizeof(unsigned char));
-	xCommandQueue = xQueueCreate(20, sizeof(unsigned char));
-	xInputQueue = xQueueCreate(20, sizeof(struct input));
+	xSendQueue = xQueueCreate(5, sizeof(unsigned char));
+	xACKQueue = xQueueCreate(5, sizeof(unsigned char));
+	xInputQueue = xQueueCreate(10, sizeof(struct input));
 
 	// Shift register Enable output (G=0)
 	PORTD &= ~_BV(PORTD6);
